@@ -10,7 +10,7 @@ cask "lmux" do
   desc "Native macOS workbench for CodeBuddy Code and Claude Code"
   homepage "https://github.com/LiManshiang/lmux"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "lmux.app"
 
