@@ -1,8 +1,10 @@
 cask "lmux" do
-  version "1.0.226"
-  sha256 "a8d127f28f818f1014a2af00c6d14e7c73866980cee27a74c39d895413e457ad"
+  version :latest
+  sha256 :no_check
 
-  url "https://github.com/LiManshiang/lmux/releases/download/v#{version}/lmux-#{version}-macos.zip",
+  # Stable asset name published by every release, so this cask never needs a
+  # version bump: releases/latest always resolves to the newest build.
+  url "https://github.com/LiManshiang/lmux/releases/latest/download/lmux-macos.zip",
       verified: "github.com/LiManshiang/lmux/"
   name "lmux"
   desc "Native macOS workbench for CodeBuddy Code and Claude Code"
