@@ -24,8 +24,13 @@ cask "lmux" do
   app "lmux.app"
 
   caveats <<~EOS
-    lmux is not notarized yet, so macOS may block the first launch.
-    Open it once with: right-click the app in Applications, then choose Open.
+    lmux is ad-hoc signed rather than notarized, so macOS blocks the first launch.
+    Double-clicking shows an "Apple could not verify" dialog that offers only
+    Done and Move to Trash — there is no way through from that dialog.
+
+    To open it the first time:
+      System Settings -> Privacy & Security -> Security -> "Open Anyway"
+      then confirm. You only need to do this once.
   EOS
 
   zap trash: [
