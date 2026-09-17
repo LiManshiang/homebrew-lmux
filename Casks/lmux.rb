@@ -6,15 +6,13 @@ cask "lmux" do
   # cask never needs a version bump: releases/latest always resolves to the
   # newest build for the host architecture.
   on_arm do
-    url "https://github.com/LiManshiang/lmux/releases/latest/download/lmux-macos.zip",
-        verified: "github.com/LiManshiang/lmux/"
+    url "https://github.com/LiManshiang/lmux/releases/latest/download/lmux-macos.zip"
     # The Ghostty GPU renderer needs macOS 13.
     depends_on macos: :ventura
   end
 
   on_intel do
-    url "https://github.com/LiManshiang/lmux/releases/latest/download/lmux-macos-intel.zip",
-        verified: "github.com/LiManshiang/lmux/"
+    url "https://github.com/LiManshiang/lmux/releases/latest/download/lmux-macos-intel.zip"
     # Intel Macs use the SwiftTerm renderer, which still supports macOS 12.
     depends_on macos: :monterey
   end
